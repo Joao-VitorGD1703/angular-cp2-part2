@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PokemonsComponent } from './pokemons/pokemons.component';
+import { HomeComponent } from './components/home/home.component';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,PokemonsComponent ],
+  imports: [RouterOutlet, HomeComponent, PokemonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

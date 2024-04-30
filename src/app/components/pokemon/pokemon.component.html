@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container mt-4">
+    <h2>Lista de Pokémon</h2>
+  
+    <div class="d-flex flex-wrap">
+      <div class="card m-2" *ngFor="let pokemon of pokemons" style="width: 10rem;">
+        <img [src]="pokemon.imageUrl" class="card-img-top" alt="{{pokemon.name}}">
+        <div class="card-body">
+          <span class="badge bg-primary">{{ pokemon.id }}</span>
+          {{ pokemon.name }} 
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
