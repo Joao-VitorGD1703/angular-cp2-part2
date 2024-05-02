@@ -7,10 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class MokeService {
   private readonly mockUrl = 'https://demo1290477.mockable.io/pockemon'
-  //https://servicodados.ibge.gov.br/api/v1/localidades/estados
+  private readonly mockUrlIbge ='https://servicodados.ibge.gov.br/api/v1/localidades/estados'
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any>{
+    return this.http.get<any>(this.mockUrl);
+
+  }
+  getDataIbge(): Observable<any>{
     return this.http.get<any>(this.mockUrl);
 
   }
